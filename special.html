@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>Special Game</title>
+    <style>
+
+    body {
+      margin: 0;
+    }
+
+    /*** ヘッダー ***/
+
+    a[href="index.html"] {
+      text-decoration: none;
+    }
+
+    a[href="index.html"] > header {
+      background: rgb(255,191,0);
+      color: #fff;
+      width: 1280px;
+      text-align: center;
+      height: 60px;
+      line-height: 60px;
+      padding: 10px;
+      font-size: 32px;
+    }
+
+    a[href="index.html"] > header:hover {
+      transition: .7s;
+      opacity: 0.5;
+      cursor: pointer;
+    }
+
+
+    /* GameBox */
+
+    div#button {
+      border: 1px solid gray;
+      width: 200px;
+      height: 50px;
+      margin: 0 auto;
+      background: yellow;
+      text-align: center;
+      line-height: 50px;
+      box-shadow: 0 4px 0 gray;
+      position: relative;
+      cursor:pointer;
+    }
+
+    div#button:hover {
+      top: 4px;
+      box-shadow: 0 0;
+    }
+
+
+    table {
+      border-collapse: collapse;
+      padding: 10px;
+      margin: 50px auto 0;
+      width: 1270px;
+      height: 600px;
+      text-align: center;
+    }
+
+    td,th {
+      width: 120px;
+      height: 50px;
+      font-size: small;
+    }
+
+    table  tr  td:hover {
+      background: orange;
+      opacity: 0.5;
+      transition: .8s;
+      cursor: pointer;
+    }
+
+
+
+    </style>
+  </head>
+  <body>
+
+    <a href="index.html">
+      <header>Go to the miniGameTop</header>
+    </a>
+
+    <!-- GameBox -->
+    <div class="container">
+
+      <table border="1">
+        <tr>
+          <th colspan="9">ギークな単語</th>
+        </tr>
+        <tr><td id="td01">default</td><td id="td02">default</td><td id="td03">default</td>
+            <td id="td04">default</td><td id="td05">default</td><td id="td06">default</td>
+            <td id="td07">default</td><td id="td08">default</td><td id="td09">default</td></tr>
+
+        <tr><td id="td10">default</td><td id="td11">default</td><td id="td12">default</td>
+            <td id="td13">default</td><td id="td14">default</td><td id="td15">default</td>
+            <td id="td16">default</td><td id="td17">default</td><td id="td18">default</td></tr>
+
+        <tr><td id="td19">default</td><td id="td20">default</td><td id="td21">default</td>
+            <td id="td22">default</td><td id="td23">default</td><td id="td24">default</td>
+            <td id="td25">default</td><td id="td26">default</td><td id="td27">default</td></tr>
+
+        <tr><td id="td28">default</td><td id="td29">default</td><td id="td30">default</td>
+            <td id="td31">default</td><td id="td32">default</td><td id="td33">default</td>
+            <td id="td34">default</td><td id="td35">default</td><td id="td36">default</td></tr>
+
+        <tr><td id="td37">default</td><td id="td38">default</td><td id="td39">default</td>
+            <td id="td40">default</td><td id="td41">default</td><td id="td42">default</td>
+            <td id="td43">default</td><td id="td44">default</td><td id="td45">default</td></tr>
+
+        <tr><td id="td46">default</td><td id="td47">default</td><td id="td48">default</td>
+            <td id="td49">default</td><td id="td50">default</td><td id="td51">default</td>
+            <td id="td52">default</td><td id="td53">default</td><td id="td54">default</td></tr>
+
+        <tr><td id="td55">default</td><td id="td56">default</td><td id="td57">default</td>
+            <td id="td58">default</td><td id="td59">default</td><td id="td60">default</td>
+            <td id="td61">default</td><td id="td62">default</td><td id="td63">default</td></tr>
+
+        <tr><td id="td64">default</td><td id="td65">default</td><td id="td66">default</td>
+            <td id="td67">default</td><td id="td68">default</td><td id="td69">default</td>
+            <td id="td70">default</td><td id="td71">default</td><td id="td72">default</td></tr>
+
+        <tr><td id="td73">default</td><td id="td74">default</td><td id="td75">default</td>
+            <td id="td76">default</td><td id="td77">default</td><td id="td78">default</td>
+            <td id="td79">default</td><td id="td80">default</td><td id="td81">default</td></tr>
+      </table>
+
+      <br>
+
+      <div id="button">Click me!!</div>
+    </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script>
+
+    // GameBox
+
+      var words = [
+                   'git','github','vi','MySQL','MarkDown','Java','PlayFrameWork','Python','機械学習',
+                   'Deep Learning','CentOS','大規模システム','ソースコード','C','PHP','html','css','JS',
+                   'coffee script','LESS','jQuery','emacs','Windows','Unix','Linux','ワンライナー','認証',
+                   'http','セキュリティ','URL','www','チューリング賞','webマイニング','アクセス解析','アナリティクス','Tomcat',
+                   'JSP/サーブレット','Spring','MVC','フレームワーク','Swift','Android','アプリ','開発','アルゴリズム',
+                   'rgb()','hsla()','チュートリアル','ドットインストール','Progate','PostgreSQL','Oracle','LPIC','Mashup Awards',
+                   'ライトニングトーク','進捗報告','レスポンシブデザイン','Ajax','Apache','オブジェクト指向','クラウド','AWS','IOT',
+                   '人工知能','OS','Eclispe','環境構築','shellscript','C#','C++','Go','Docker',
+                   'Vagrant','仮想環境','Cloud9','Ansible','ライブラリ','API','メソッド','変数','命名規則',
+                   '工期','基本情報','統計情報','ITP','ITストラテジスト','フィッシュボーン','フローチャート','納期','期限',
+                   '予算','エンジニア','プログラマ','フルスタック','フロントエンド','サーバサイド','インフラ','設計','詳細設計',
+                   '保守運用','要件定義','ウォーターフォール','アジャイル','for文','switch文','文法','ターミナル','コマンドプロンプト',
+                   'アランケイ','Linux','RedHat','yellodog','デーモン','プロパティ','メソッド','クラス','継承',
+                   'ユーティリティクラス','基底クラス','ブール値','引数','戻り値','値渡し','参照渡し','ポインタ','フォーム',
+                   'フォームヘルパー','CoC','CakePHP','FuelPHP','three.js','3D','デザイナー','Bootstrap','クッキー',
+                   'セッション','キャッシュ','JSON','MongoDB','XML','DOM操作','jpg','png','ファビコン',
+                   'アイコン','iOS','バージョンアップ','デグれってる','デバッグ','リファクタ','技術レポート','技術調査','チーム開発',
+                   '炎上','デスマーチ','シリコンバレー','MIT','Twitter','トラブルシューティング','セグエ','シーケンス図','散布図',
+                   '相関関係','相関係数','ビッグデータ','データマイニング','データハンドリング','意味解析','構文解析','情報理論','数学',
+                   'CRUD','新規登録','ログアウト','fontawesome','CDN','アカマイ','テクノロジー','科学技術','ビルゲイツ',
+                   '松尾豊','情報工学','石黒浩','ロボット工学','スティーブ・ジョブズ','Apple','アタリ','ピクサー','webサイト',
+                   'ブログ','ページ遷移','エラー','バグ','コードリーディング','配列','データ構造','格納','select',
+                   'update','delete','create','テーブル','データベース','ウェブ','ログ','ダンプ','スクリーンショット',
+                   'マルチメディア','画像','動画','テラバイト','ビット','シフト演算','アップロード','ダウンロード','CG',
+                   'デッドロック','コンピュータサイエンス','アクチュエータ','シークタイム','インクリメント','デクリメント','dd','yy','Atom',
+                   'カラーコード','順次処理','繰り返し処理','分岐処理','Scala','移植','ウイルスバスター','タイピング','id',
+                   '一意制約','ユニーク','Ubuntu','プロセス','Chrome','Firefox','i-Phone','i-tunes','App Store',
+                   '商用サイト','GoogleMap','Web API','緯度経度','三角関数','指数対数','微分積分','線形代数','行列',
+                   '確率統計','常微分方程式','フーリエ解析','二次関数','方程式','情報視覚化','レイアウト','ヘッダー','コンテンツ',
+                   'サイドバー','フッター','知的財産権','汎用タグ','インライン要素','ブロック要素','著作権','意匠権','システム',
+                   '大規模データ解析','sin cos','ロジック','DB設計','初期設定','マシン','深層学習','音声エージェント','Siri',
+                   '猫の論文','ネットワーク','CTP/IPプロトコル','レイヤー','インターネット','検索エンジン','入力値検証','kotlin','言語',
+                   '文字列解析','文字列分割','IDE','PHPStorm','命題','Map','List','String.valueOf()','int型',
+                   'String型','スクレイピング','クローラ','RSS','AOJ','テラテイル','トラバース','フォルダ','ディレクトリ',
+                   'キータ','デストラクタ','コンストラクタ','jQueryUI','jQueryMobile','絶対配置','相対配置','アスペクト比','縦横比',
+                   '最先端テクノロジー','枯れた技術','SVN','管理画面','自動化','天才プログラマ','メガベンチャー','サイボウズ','DeNA',
+                   'サイバーエージェント','ミドルウェア','電源','アップルマーク','@','文末にセミコロン','仕様書','タスク','スクエニ',
+                   'ゼロックス','パロアルト','研究所','Google X','自動運転車','ドローン','Google Glass','Apple Watch','ホロレンズ',
+                   '技術セミナー','広告','コンバージョン','CPU','メモリ','HD','SD','セキュア','不揮発性',
+                   'RAM','応用情報','規約','情報インフラ','ユビキタス','スマホ','スマートホーム','スマートデバイス','キロバイト'
+
+                 ];
+
+      var button = document.getElementById('button');
+
+       //defaultの表示を変更する
+       var td01 = document.getElementById('td01');
+       var td02 = document.getElementById('td02');
+       var td03 = document.getElementById('td03');
+       var td04 = document.getElementById('td04');
+       var td05 = document.getElementById('td05');
+       var td06 = document.getElementById('td06');
+       var td07 = document.getElementById('td07');
+       var td08 = document.getElementById('td08');
+       var td09 = document.getElementById('td09');
+       var td10 = document.getElementById('td10');
+       var td11 = document.getElementById('td11');
+       var td12 = document.getElementById('td12');
+       var td13 = document.getElementById('td13');
+       var td14 = document.getElementById('td14');
+       var td15 = document.getElementById('td15');
+       var td16 = document.getElementById('td16');
+       var td17 = document.getElementById('td17');
+       var td18 = document.getElementById('td18');
+       var td19 = document.getElementById('td19');
+       var td20 = document.getElementById('td20');
+       var td21 = document.getElementById('td21');
+       var td22 = document.getElementById('td22');
+       var td23 = document.getElementById('td23');
+       var td24 = document.getElementById('td24');
+       var td25 = document.getElementById('td25');
+       var td26 = document.getElementById('td26');
+       var td27 = document.getElementById('td27');
+       var td28 = document.getElementById('td28');
+       var td29 = document.getElementById('td29');
+       var td30 = document.getElementById('td30');
+       var td31 = document.getElementById('td31');
+       var td32 = document.getElementById('td32');
+       var td33 = document.getElementById('td33');
+       var td34 = document.getElementById('td34');
+       var td35 = document.getElementById('td35');
+       var td36 = document.getElementById('td36');
+       var td37 = document.getElementById('td37');
+       var td38 = document.getElementById('td38');
+       var td39 = document.getElementById('td39');
+       var td40 = document.getElementById('td40');
+       var td41 = document.getElementById('td41');
+       var td42 = document.getElementById('td42');
+       var td43 = document.getElementById('td43');
+       var td44 = document.getElementById('td44');
+       var td45 = document.getElementById('td45');
+       var td46 = document.getElementById('td46');
+       var td47 = document.getElementById('td47');
+       var td48 = document.getElementById('td48');
+       var td49 = document.getElementById('td49');
+       var td50 = document.getElementById('td50');
+       var td51 = document.getElementById('td51');
+       var td52 = document.getElementById('td52');
+       var td53 = document.getElementById('td53');
+       var td54 = document.getElementById('td54');
+       var td55 = document.getElementById('td55');
+       var td56 = document.getElementById('td56');
+       var td57 = document.getElementById('td57');
+       var td58 = document.getElementById('td58');
+       var td59 = document.getElementById('td59');
+       var td60 = document.getElementById('td60');
+       var td61 = document.getElementById('td61');
+       var td62 = document.getElementById('td62');
+       var td63 = document.getElementById('td63');
+       var td64 = document.getElementById('td64');
+       var td65 = document.getElementById('td65');
+       var td66 = document.getElementById('td66');
+       var td67 = document.getElementById('td67');
+       var td68 = document.getElementById('td68');
+       var td69 = document.getElementById('td69');
+       var td70 = document.getElementById('td70');
+       var td71 = document.getElementById('td71');
+       var td72 = document.getElementById('td72');
+       var td73 = document.getElementById('td73');
+       var td74 = document.getElementById('td74');
+       var td75 = document.getElementById('td75');
+       var td76 = document.getElementById('td76');
+       var td77 = document.getElementById('td77');
+       var td78 = document.getElementById('td78');
+       var td79 = document.getElementById('td79');
+       var td80 = document.getElementById('td80');
+       var td81 = document.getElementById('td81');
+
+
+
+       button.addEventListener('click', function() {
+
+         var i = 0;
+         function calc() {
+           var timerId = setTimeout(function(){
+
+              td01.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td02.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td03.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td04.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td05.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td06.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td07.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td08.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td09.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td10.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td11.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td12.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td13.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td14.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td15.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td16.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td17.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td18.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td19.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td20.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td21.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td22.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td23.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td24.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td25.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td26.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td27.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td28.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td29.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td30.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td31.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td32.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td33.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td34.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td35.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td36.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td37.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td38.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td39.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td40.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td41.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td42.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td43.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td44.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td45.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td46.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td47.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td48.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td49.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td50.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td51.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td52.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td53.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td54.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td55.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td56.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td57.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td58.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td59.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td60.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td61.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td62.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td63.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td64.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td65.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td66.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td67.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td68.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td69.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td70.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td71.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td72.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td73.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td74.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td75.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td76.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td77.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td78.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td79.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td80.innerHTML = words[Math.floor(Math.random() * words.length)];
+              td81.innerHTML = words[Math.floor(Math.random() * words.length)];
+               i++;
+               calc();
+           },1000);
+
+           if (i > 30) {
+             clearTimeout(timerId);
+           }
+         }
+         calc();
+
+       });
+
+  </script>
+  </body>
+</html>

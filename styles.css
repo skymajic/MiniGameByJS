@@ -1,0 +1,143 @@
+@charset "UTF-8";
+
+/* 全体 */
+
+body {
+  margin: 0;
+  background: #e0e0e0;
+  font-family: Verdana, sans-serif;
+}
+
+.container {
+  width: 500px;
+  height: 370px;
+  background: #fff;
+  border-radius: 5px;
+  margin: 50px auto 0;
+  padding: 25px;
+}
+
+.container + .container {
+  margin-top: 50px;
+}
+
+#toTop {
+  background: orange;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 70px;
+  cursor: pointer;
+  color: #fff;
+}
+
+#toTop:hover {
+  opacity: 0.5;
+  transition: .8s;
+}
+
+/* GameBox_01 */
+
+#calender {
+  background: lime;
+  width: 300px;
+  height: 150px;
+  line-height: 150px;
+  border-radius: 5px;
+  text-align: center;
+  color: #fff;
+  font-size: 30px;
+  margin: 10px auto 0;
+  cursor: pointer;
+  box-shadow: 0 4px 0 green;
+  position: relative;
+}
+
+#calender:hover {
+  opacity: 0.5;
+  transition: .7s;
+  top: 4px;
+  box-shadow: none;
+}
+
+
+#info {
+  background: aqua;
+  width: 400px;
+  height: 150px;
+  line-height: 150px;
+  border-radius: 5px;
+  text-align: center;
+  color: #fff;
+  font-size: 30px;
+  margin: 20px auto 0;
+  cursor: pointer;
+  box-shadow: 0 4px 0 blue;
+  position: relative;
+}
+
+#info:hover {
+  opacity: 0.5;
+  transition: .7s;
+  top: 4px;
+  box-shadow: none;
+}
+
+
+/* GameBox_02 */
+
+#check {
+  color: lime;
+  font-size: 50px;
+  width: 350px;
+  height: 200px;
+  line-height: 200px;
+  text-align: center;
+  margin: 50px auto 0;
+  border-radius: 5px;
+  background: #eeeeee;
+}
+
+#button {
+  color: #fff;
+  font-size: 15px;
+  margin: 30px auto 0;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  box-shadow: 0 4px 0 gray;
+  position: relative;
+  background: orange;
+  cursor: pointer;
+}
+
+#button:hover {
+  box-shadow: 0 0;
+  top: 4px;
+  opacity: 0.5;
+  transition: .7s;
+}
+
+/* Go to the special game */
+
+div.container:nth-child(3) {
+  height: 110px;
+}
+
+a[href="special.html"] {
+  margin-left: 90px;
+  display: inline-block;
+  width: 300px;
+  height: 100px;
+  background: pink;
+  color: #fff;
+  text-decoration: none;
+  font-size: 40px;
+}
+
+a[href="special.html"]:hover {
+  opacity: 0.5;
+  transition: .7s;
+}
